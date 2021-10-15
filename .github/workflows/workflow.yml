@@ -75,7 +75,7 @@ jobs:
     needs: [build_wheels, build_sdist]
     runs-on: ubuntu-latest
     steps:
-      - uses: spacetelescope/action-publish_to_pypi/publish@master
+      - uses: zanecodes/action-publish_to_pypi/publish@bug-test
         with:
           test: ${{ inputs.test }}
           user: ${{ secrets.user }}
@@ -87,7 +87,7 @@ jobs:
     needs: [build_wheel, build_sdist]
     runs-on: ubuntu-latest
     steps:
-      - uses: spacetelescope/action-publish_to_pypi/publish@master
+      - uses: zanecodes/action-publish_to_pypi/publish@bug-test
         with:
           test: ${{ inputs.test }}
           user: ${{ secrets.user }}
